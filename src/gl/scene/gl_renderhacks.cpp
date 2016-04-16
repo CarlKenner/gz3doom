@@ -699,9 +699,6 @@ void FDrawInfo::DrawUnhandledMissingTextures()
 
 		if (!glset.notexturefill) FloodLowerGap(seg);
 	}
-
-	validcount++; // [CMB] Allows correct rendering of textures in second eye stereoscopic view
-
 	MissingUpperTextures.Clear();
 	MissingLowerTextures.Clear();
 	MissingUpperSegs.Clear();

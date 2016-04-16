@@ -827,6 +827,8 @@ sector_t * FGLRenderer::RenderViewpoint (AActor * camera, GL_IRECT * bounds, flo
 		ProcessScene(toscreen);
 		if (mainview) EndDrawScene(retval);	// do not call this for camera textures.
 		eye->TearDown();
+
+		::validcount++; // [CMB] reset marking of map linedefs, so subsequent eye render pass can start fresh.
 	}
 	stereo3dMode.TearDown();
 
